@@ -1,0 +1,28 @@
+<div class="wrapper" [ngStyle]="{
+    'background-image' : 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url(assets/login.jpg)' 
+    }">
+    <div class="header">
+        <div class="logo">
+           <a href="#">
+               <img src="/assets/logoTipo.png" alt="logo">
+           </a>
+        </div>
+    </div>
+    <div class="login-body">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+                <div class="input-wrap">
+                    <input formControlName="email" type="email" placeholder="Email">
+                </div>
+                <div class="input-wrap">
+                    <input formControlName="password" type="password" placeholder="Password">
+                </div>
+                <div class="input-wrap">
+                   <button type="submit" [disabled]="!loginForm.valid">Login</button>
+                </div>
+            </form>
+            <a routerLink="/signup">Click to Signup</a>
+        </div>
+    </div>
+</div>

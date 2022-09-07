@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+.container{
+    background-color: black;
+    display:flex;
+    flex-direction: column;
+   
+
+    .header{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        margin-bottom: 10px;
+    }
+    .header_main{
+        display:flex;
+        padding: 20px;
+        width: 100%;
+        justify-content: space-between;
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        transition: all 0.3;
+        transition-timing-function: ease-in;
+    }
+    .header_left{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        img{
+            margin-left: 50px;
+            height: 100%;
+            width: 100px;
+            margin-top: 2px;
+        }
+
+        li.active{
+            a{
+                color: white
+            }
+        }
+    }
+
+    .header_right ul{
+     flex: 1;
+     margin-right: 50px;
+     display: flex;
+     align-items: center;
+     gap: 20px;
+     margin-bottom: 10px;
+
+     li a{
+         color: white;
+         font-size: 12px;
+         display: inline-block;
+         font-weight: 600;
+         letter-spacing: 0.8px;
+         font-family: 'Source Sans Pro', sans-serif;
+        
+
+         
+         }
+    }
+}
+
+
+
+.body{
+    background-color: black;
+   position: relative;
+   top: 500px;  
+   overflow-y: hidden; 
+   padding: 15px;
+   overflow-x: scroll;
+
+   &::-webkit-scrollbar{
+       display: none;
+   }
+}
+
+
+ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    a{
+        display: inline-block;
+        width: fit-content;
+        text-decoration: none;
+        cursor: pointer;
+        color: #a4a4a4;
+        font-size: 17px;
+        font-weight: 600;
+        font-family: 'Source Sans Pro', sans-serif;
+        transition: all 0.2 ease;
+
+        &:hover{
+            color: #696969;
+        }
+        
+    }
+}
+
+

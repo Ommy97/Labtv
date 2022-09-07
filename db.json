@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "signupUsers": [
+    {
+      "fullname": "Omar",
+      "surname": "Ratbi",
+      "email": "Ommy97@outlook.it",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "fullname": "francesco",
+      "surname": "rossi",
+      "email": "FraRossi@gmail.com",
+      "password": "12345",
+      "id": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

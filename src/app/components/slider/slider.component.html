@@ -1,0 +1,44 @@
+<input type="text"  class="search" placeholder="Search film" [(ngModel)]="search">
+
+<h2>Trending</h2>
+<div class="movie">
+    <div class="movie_images">
+            <ngx-slick-carousel  class="carousel"
+            #slickModal="slick-carousel"
+            [config]="sliderConfig">
+                <div ngxSlickItem *ngFor="let m of trending | filter: search"  class="slide" >
+                    
+                       <img src="{{m.image}}"  (click)="visualizza(m)">
+                    
+                </div>
+            </ngx-slick-carousel>
+     </div>
+    </div>
+
+    <h2>Popular</h2>
+<div class="movie">
+    <div class="movie_images">
+        <ngx-slick-carousel  class="carousel"
+        #slickModal="slick-carousel"
+        [config]="sliderConfig">
+            <div ngxSlickItem *ngFor="let m of popular | filter: search" class="slide">
+               <img src="{{m.image}}"  (click)="visualizza(m)">
+            </div>
+        </ngx-slick-carousel>
+     </div>
+    </div>
+
+    <h2>Upcoming</h2>
+<div class="movie">
+    <div class="movie_images">
+        <ngx-slick-carousel  class="carousel"
+        #slickModal="slick-carousel"
+        [config]="sliderConfig">
+            <div ngxSlickItem *ngFor="let m of upcoming | filter: search" class="slide">
+               <img src="{{m.image}}"  (click)="visualizza(m)">
+            </div>
+        </ngx-slick-carousel>
+ 
+     </div>
+    </div>
+
